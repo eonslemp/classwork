@@ -79,12 +79,114 @@
 //     k +=5
 // }
 
-j = 1;
-while(j <= 20){
-    if(j%2 ==0){
-    console.log(3*j)
-    }
-    j++
+// j = 1;
+// while(j <= 20){
+//     if(j%2 ==0){
+//     console.log(3*j)
+//     }
+//     j++
 
+// }
+
+// i = 2;
+// while(i <20){
+//     let factors =0;
+//     let j = 2
+//     while (j <i){
+//         if (i%j == 0) factors++;
+//         j++;
+//     }
+//     if(factors == 0 && i !=1) {
+//         console.log(i + 'is prime');
+
+//     }
+//     i++;
+// }
+
+// let dollars = 6
+// quarters = 0
+// while (dollars > 0){
+//     dollars -= .25;
+//     quarters ++
+// }
+// console.log(quarters)
+
+
+// x = 10;
+// let list = [];
+// while(x <= 100){
+//     odds = [];
+//     evens = [];
+//     // let list = [];
+//     list.push(x);
+//     x+=10;
+//     l = 0;
+//     while(l <= list.length-1){
+//        y = list[l];
+//        if (l%2 == 0){
+//         odds.push(y);
+//         l++
+//        } else {
+//         evens.push(y)
+//         l++
+//     }
+
+//     }
+// }
+//  console.log(odds, evens)
+// console.log(list.length)
+
+// x = 10;
+// let list = [];
+// while(x <= 100){
+//     oddstr = '';
+//     evenstr = '';
+//     // let list = [];
+//     list.push(x);
+//     x+=10;
+//     l = 0;
+//     while(l <= list.length-1){
+//        y = list[l];
+//        if (l%2 == 0){
+//         oddstr += (y+' ');
+//         l++
+//        } else {
+//         evenstr += (y + ' ');
+//         l++
+//     }
+
+//     }
+// }
+//  console.log(oddstr, evenstr)
+// console.log(list.length)
+
+// for(let i  = 1; i <= 5; i++){
+//     let list = []
+//     for (let k = 1; k <= i; k++){
+//         list.push(k)
+
+//     }
+//     console.log(list)
+// }
+
+// for(let i = 5; i > 0; i --){
+//     str = ''
+//     for(let k = 1; k <= i; k++){
+//         str += i;
+//     }
+//     console.log(str)
+// }
+
+
+let i = 500;
+list = []
+while(i <= 800){
+    if((i % 4) == 0){ 
+        list.push(i)
+        // console.log(i)
+    }
+
+    i+=2
 }
 
+console.log(list)
