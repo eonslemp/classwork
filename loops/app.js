@@ -178,16 +178,117 @@
 // }
 
 
-let i = 500;
-list = []
-while(i <= 800){
-    if((i % 4) == 0){ 
-        list.push(i)
-        // console.log(i)
+// let i = 500;
+// list = []
+// while(i <= 800){
+//     if((i % 4) == 0){ 
+//         list.push(i)
+//         // console.log(i)
+//     }
+
+//     i+=2
+// }
+
+// console.log(list)
+// for of, for each
+let foods = ['kimchi','tacos', 'arepa','spam']
+
+
+// const myForEachFunction = function() {
+
+// }
+
+// foods.forEach(function(item, idx, array) {
+//     console.log(item)
+// })
+
+// foods.forEach(() => {
+
+// }) 
+
+// anonymous function
+// filter
+// let newFoodsArray = foods.filter((item, idx) => {
+// if true -> keep item
+// if false _> discard
+// if(item[0] == 'k' || item[0] == 's'){
+//     return true
+// }else{return}
+// })
+
+// console.log(newFoodsArray)
+
+// map
+// let newArray = foods.map(function(item, idx) {
+//     return item + '!';
+// })
+// console.log(newArray)
+
+// reduce (built in array method)
+
+// let nums = [4, 10, 25, 30, 100]
+
+// let results = nums.reduce((previousValue, currentValue) =>{
+//     return currentValue + previousValue
+// }, 400)
+
+
+// console.log(results)
+
+// let fizzBuzz = function(num){
+
+// }
+function fizzBuzz(num){
+    for(let i = 1; i <= num -1; i++){
+        if (i % 3 == 0&& i %5 == 0){
+            console.log('fizz buzz')
+        } else if (i % 3 == 0){
+            console.log("fizz")
+        } else if (i % 5 == 0){
+            console.log('buzz')
+        } else {
+            console.log(i)
+        }
     }
-
-    i+=2
 }
+console.log(fizzBuzz(100))
 
-console.log(list)
+// function quarters(cost, bill){
+//     change = bill - cost;
+//     num_quarters = change*4;
+//     console.log(Math.floor(num_quarters))
+// }
+// console.log(quarters(4, 10))
 
+
+// function minChange(cost, bill){
+//     denom_1 = 1;
+//     denom_5 = 5;
+//     denom_10 = 10;
+//     denom_20 = 20;
+//     denom_50 = 50;
+//     bill_count = 0;
+//     change = bill - cost;
+//     change = Math.round(change);
+//     for(i = change; i != 0;){
+//         if(i - denom_50 >= 0){
+//             i = i- denom_50;
+//             bill_count++;
+//         } else if (i - denom_20 >= 0){
+//             i = i - denom_20;
+//             bill_count++;
+//         } else if (i - denom_10 >= 0){
+//             i = i - denom_10;
+//             bill_count++;
+//         } else if(i - denom_5 >= 0){
+//             i = i - denom_5;
+//             bill_count++;
+//         } else{
+//             i--;
+//             bill_count++;
+//         }
+//     }
+//     return bill_count;
+// }
+
+// console.log(minChange(27.83, 113))
