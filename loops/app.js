@@ -238,28 +238,22 @@ let foods = ['kimchi','tacos', 'arepa','spam']
 // let fizzBuzz = function(num){
 
 // }
-function fizzBuzz(num){
-    for(let i = 1; i <= num -1; i++){
-        if (i % 3 == 0&& i %5 == 0){
-            console.log('fizz buzz')
-        } else if (i % 3 == 0){
-            console.log("fizz")
-        } else if (i % 5 == 0){
-            console.log('buzz')
-        } else {
-            console.log(i)
-        }
-    }
-}
-console.log(fizzBuzz(100))
-
-// function quarters(cost, bill){
-//     change = bill - cost;
-//     num_quarters = change*4;
-//     console.log(Math.floor(num_quarters))
+// function fizzBuzz(num){
+//     for(let i = 1; i <= num -1; i++){
+//         if (i % 3 == 0&& i %5 == 0){
+//             console.log('fizz buzz')
+//         } else if (i % 3 == 0){
+//             console.log("fizz")
+//         } else if (i % 5 == 0){
+//             console.log('buzz')
+//         } else {
+//             console.log(i)
+//         }
+//     }
 // }
-// console.log(quarters(4, 10))
+// console.log(fizzBuzz(100))
 
+// 
 
 // function minChange(cost, bill){
 //     denom_1 = 1;
