@@ -112,33 +112,71 @@
 //     for()
 // }
 
-let string = 'strings';
-let stringArr = [...string];
-let stringSet = new Set(stringArr)
-let count_obj = {}
-// for (let key in string){
-//     // console.log(string[key])
-//     for(i = 0; i <= (string.length - key); i++){
+let test = 'steven the donkey is a silly name for a donkey';
 
+// function characterCount_arr(string){
+//     let stringArr = [...string];
+//     let stringSet = new Set(stringArr)
+//     let count_obj = {}
+
+//     for(let key of stringSet){
+//         counter = 0;
+
+//     stringArr.forEach(itm => {if (key == itm)counter++;
+//     })
+//     count_obj[key] = counter;
 //     }
-
+//     return(count_obj)
 // }
-for(let key in stringSet){
-    counter = 0;
 
-stringArr.forEach(itm => {if (key == itm)counter++;
-})
-count_obj[key] = counter;
+// const  test = 'steven the donkey is a silly name for a donkey';
+// function characterCounter(string){
+// const count_obj = {}
+// for(let str of string){
+//     // console.log(str)
+//     if(count_obj[str]){
+//         count_obj[str] += 1;
+//     }else{count_obj[str] = 1}
+// }
+// return count_obj
+// }
+// console.log(characterCounter(test))
+
+function minChange(cost, bill){
+    let denom_1 = 1;
+    let denom_5 = 5;
+    let denom_10 = 10;
+    let denom_20 = 20;
+    let denom_50 = 50;
+    let bill_count = 0;
+    const bill_count_obj = {
+        "50's": 0,
+        "20's": 0,
+        "10's": 0,
+        "5's": 0,
+        "1's": 0
+    }
+    change = bill - cost;
+    change = Math.round(change);
+    for(i = change; i != 0;){
+        if(i - denom_50 >= 0){
+            i = i- denom_50;
+            bill_count_obj["50's"]+= 1;
+        } else if (i - denom_20 >= 0){
+            i = i - denom_20;
+            bill_count_obj["20's"]+= 1;
+        } else if (i - denom_10 >= 0){
+            i = i - denom_10;
+            bill_count_obj["10's"]+= 1;
+        } else if(i - denom_5 >= 0){
+            i = i - denom_5;
+            bill_count_obj["5's"]+= 1;
+        } else{
+            i--;
+            bill_count_obj["1's"]+= 1;
+        }
+    }
+    return bill_count_obj;
 }
-console.log(count_obj)
-console.log(stringSet)
-// const arr = ["a", "a", "a", "b", "b", "b", "b", "c", "c", "c"];
-// let count = 0;
 
-// function countValues(array, countItem) {
-//   array.forEach(itm => {
-//     if (itm == countItem) count++;
-//   });
-//   console.log(`${countItem} ${count}`);
-// }
-// countValues(arr, "c");
+console.log(minChange(27.83, 113))

@@ -1,4 +1,0 @@
-radio = {
-    station: 'country'
-}
-console.log(radio.station)
