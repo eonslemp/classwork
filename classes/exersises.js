@@ -84,55 +84,63 @@ class BankAccount{
     constructor(ownerName, Balance){
         this.name = ownerName;
         this.balance = Balance;
-        this.accountNum = Math.floor(Math.random()*1000)
+        this.accountNum = 'A' + Math.floor(Math.random()*1000)
     }
     deposit(amount){
-        this.balance += amount
+        this.balance += amount;
+        console.log('new balance is: ' +this.balance)
     }
 
     withdraw(amount){
-        if(this.balance - amoount < 0){
+        if(this.balance - amount < 0){
             console.log('transaction declined')
-        } else{this.balance -= amount}
+        } else{this.balance -= amount;
+        console.log('new balance: ' + this.balance)}
 
     }
     
 }
 
 // const test = new BankAccount('Eon', 1000000)
+// test.deposit(123)
 // console.log(test.name, test.balance, test.accountNum)
+// test.withdraw(200000)
+
+
 class checkingAccount extends BankAccount{
     constructor(ownerName, Balance, overdraftEnable = false){
         super(ownerName, Balance)
-        this.accountNum = Math.floor(Math.random()*1000)
+        this.accountNum = 'C' + Math.floor(Math.random()*1000)
         this.overdraft = overdraftEnable
     }
 
     withdraw(amount){
-        if(this.overdraftEnable == true && this.balance - amount <0){
-            this.balance = this.balance - amount;
+        if(this.overdraftEnable && this.balance < amount){
+            this.balance -= amount+20;
             console.lot('this transaction overdrafts.  your balance is : '+ this.balance)
-        }else if(this.overdraft == false && (this.balance - amount < 0)){
+        }else if(this.overdraft == false && (this.balance < amount)){
             console.log('transaction declined')
         } else{this.balance = this.balance - amount}
     }
 }
-const checkingTest = new checkingAccount('Eon', 1000000, false)
-checkingTest.withdraw(1000005)
-console.log(checkingTest.name, checkingTest.balance, checkingTest.accountNum)
+
+// const checkingTest = new checkingAccount('Eon', 1000000, false)
+// checkingTest.withdraw(10005)
+// console.log(checkingTest.name, checkingTest.balance, checkingTest.accountNum)
+// checkingTest.withdraw(30000000)
 
 class savingsAccount extends BankAccount{
     constructor(ownerName, Balance){
         super(ownerName, Balance)
-        this.name = ownerName;
-        this.balance = Balance;
-        this.accountNum = 's' + Math.floor(Math.random()*1000)
+        // this.name = ownerName;
+        // this.balance = Balance;
+        this.accountNum = 'S' + Math.floor(Math.random()*1000)
 }
     withdraw(amount){
         console.log('no withdrawal allowed with savings acoount')
     }
 }
 
-// const savingsTest = new savingsAccount("Eon", 1000000)
-// console.log(savingsTest.name, savingsTest.balance)
-// savingsTest.withdraw(100)
+const savingsTest = new savingsAccount("Eon", 1000000)
+console.log(savingsTest.name, savingsTest.balance)
+savingsTest.withdraw(100)
