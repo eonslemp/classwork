@@ -141,6 +141,38 @@ class savingsAccount extends BankAccount{
     }
 }
 
-const savingsTest = new savingsAccount("Eon", 1000000)
-console.log(savingsTest.name, savingsTest.balance)
-savingsTest.withdraw(100)
+// const savingsTest = new savingsAccount("Eon", 1000000)
+// console.log(savingsTest.name, savingsTest.balance)
+// savingsTest.withdraw(100)
+
+
+// study singleton and method chaining
+class Factory {
+    constructor(company){
+        this.company = company;
+        this.cars = [];
+    }
+
+    generateCar() {
+        const newCar = new Car(this.company, this.cars.length);
+        this.cars.push(newCar);
+        return this
+    }
+
+    findCar(index){
+        return this.cars[index];
+    }
+}
+
+const tesla = new Factory('Tesla')
+for (let i = 0; i < 100; i++){
+    tesla.generateCar()
+}
+
+
+
+const tesla = new Factory('Tesla')
+
+tesla.generateCar().generateCar().generateCar()
+// console.log(tesla)
+// console.log(tesla.findCar(99))
