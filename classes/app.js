@@ -92,7 +92,7 @@ class Pirate{
     losesHand(){
         if(this.hand >0){
             hand--;
-        }
+        }else{console.log('there goes a foot')}
     }
 }
 let dreadPirateRoberts = new Pirate('roberts',2,10000,true)
@@ -135,9 +135,9 @@ class Scoundrel extends Pirate{
 }
 const han_solo = new Scoundrel('han solo',2, 500000, true , 'chewy', 'millenium falcon')
 
-// han_solo.charm()
-// han_solo.greet('luke')
-// han_solo.brag()
-// console.log(han_solo.sidekick)
+han_solo.charm()
+han_solo.greet('luke')
+han_solo.brag()
+console.log(han_solo.sidekick)
 
-// han_solo.charm()
+han_solo.charm()
