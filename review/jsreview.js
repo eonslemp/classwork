@@ -218,3 +218,50 @@ function isVowel(letter){
     }
 }
 // console.log(isVowel('g'))
+
+function getTwoLengths(str1, str2){
+    const strArray = new Array();
+    strArray.push(str1.length, str2.length)
+    return strArray
+}
+
+// console.log(getTwoLengths('hello','world'))
+
+function getMultipleLengths(string_arr){
+    const length_arr = new Array();
+    for(let str of string_arr){
+        length_arr.push(str.length)
+    }
+    return length_arr
+}
+
+test_array = ['steven', 'the', 'donkey', 'is', 'a', 'silly', 'name', 'for', 'a', 'donkey'];
+// console.log(getMultipleLengths(test_array))
+
+function maxOfThree(num1, num2, num3){
+    if(num1 >= num2 && num1 >= num3){
+        return num1
+    } else if(num2 >= num3){
+        return num2
+    } else {
+        return num3
+    }
+
+
+}
+// console.log(maxOfThree(5,4,3))
+
+// maxArray = [1,2,3];
+// console.log(Math.max(maxArray))
+
+function printLongestWord(strArray){
+    let lengthArray = new Array(); 
+    for(i = 0; i < strArray.length; i++){
+        lengthArray.push(strArray[i].length);
+    }
+    // indexOf(Math.max.apply(null, lengthArray))
+    let index = lengthArray.indexOf(Math.max.apply(null, lengthArray))
+    return strArray[index]
+}
+
+console.log(printLongestWord(test_array))
