@@ -106,7 +106,7 @@ define is the articulation of the logic of a process.
  */
 
 const quotes = ['the height of generalship is not to fight 1000 battle and win 1000 battles, but to not have to fight',
- 'always newver forget to make sure your optics are clean','discipline equals freedom']
+ 'always never forget to make sure your optics are clean','discipline equals freedom']
 const randomThings = [1, 10, 'Hello', true]
 // console.log(randomThings[0])
 
@@ -185,8 +185,8 @@ thomsCloset[1].splice(2,1, 'footie pajamas')
 // B  printCool
 
 
-const arrowCool = (name) => {
-    console.log(name + " is like totally cool because he is always writing sick arrow functions")
+const arrowCool = name => {
+    console.log(name + " is like totally cool because he is always writing sick arrow functions");
 }
 // arrowCool('Eon')
 const calculateCube = function(number){
@@ -200,20 +200,20 @@ function isVowel(letter){
     // }else{
     //     return 'not a vowel'
     // }
-    isa = 'is a vowel';
+    isaV = 'is a vowel';
     switch(letter.toLowerCase()){
         
-        case 'a': return isa;
+        case 'a': return isaV;
             break;
-        case 'e': return isa;
+        case 'e': return isaV;
             break;
-        case 'i': return isa;
+        case 'i': return isaV;
             break;
-        case 'o': return isa;
+        case 'o': return isaV;
             break;
-        case 'u': return isa;
+        case 'u': return isaV;
             break;
-        default: return 'not vowel';
+        default: return 'not a vowel';
 
     }
 }
@@ -264,4 +264,41 @@ function printLongestWord(strArray){
     return strArray[index]
 }
 
-console.log(printLongestWord(test_array))
+// console.log(printLongestWord(test_array))
+
+// Objects
+let user = {
+    name: "JimBob Horkhiemer",
+    email: "JamesRobertsHorkhiemrIV@proton.me",
+    age:  15,
+    purchased: []
+}
+user.email = 'JimmyBob_H@gmail.com'
+console.log(user.email);
+user.age = user.age += 1 ;
+// console.log(user.age)
+user.location = 'the dark side of the moon';
+// console.log(user.location);
+user.purchased.push('carbohydrates', 'peace of mind')
+// console.log(user.purchased)
+user.purchased.push('merino jodhpurs')
+// console.log(user.purchased[2])
+
+user.friend = {
+    name: 'Grace Hopper',
+    age: 85,
+    location: 'illuminated side of the moon',
+    purchased: []
+}
+console.log(user.friend.name + ', ' + user.friend.location)
+user.friend.age = 55;
+console.log(user.friend.age);
+user.friend.purchased.push('The One Ring', 'a latte')
+console.log(user.friend.purchased[1])
+for(i = 0; i < user.purchased.length; i++){
+    console.log(user.purchased[i])
+}
+
+for(i = 0; i < user.friend.purchased.length; i++){
+    console.log(user.friend.purchased[i])
+}
