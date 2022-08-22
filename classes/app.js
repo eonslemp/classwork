@@ -141,3 +141,52 @@ han_solo.brag()
 console.log(han_solo.sidekick)
 
 han_solo.charm()
+
+
+
+
+
+class Person{
+    constructor(nameParam, ageParam = 0, heightParam = 0, weightParam = 0, moodParam = 0, hamstersParam = [], bankAccountParam = 0){
+        this.name = nameParam,
+        this.age = ageParam,
+        this.height = heightParam,
+        this.weight = weightParam,
+        this.mood = moodParam,
+        this.hamsters = hamstersParam,
+        this.bankAccount = bankAccountParam
+
+    }
+    getName(){
+        return this.name
+    }
+    getAge(){
+        return this.age
+    }
+    getWeight(){
+        this.weight
+    }
+    greet(){
+        console.log('hello my name is ' + this.name)
+    }
+    eat(){
+        this.weight++;
+        this.mood++;
+    }
+    exercise(){
+        this.weight--;
+    }
+    ageUp(){
+        this.age++;
+        this.height++;
+        this.weight++;
+        this.mood--;
+        this.bankAccount+=10
+    }
+    buyHamster(hamster){
+        this.hamstersParam.push(hamster);
+    }
+}
+
+let eon = new Person('Eon')
+console.log(eon.height)

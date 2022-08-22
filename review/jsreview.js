@@ -266,16 +266,19 @@ function printLongestWord(strArray){
 
 // console.log(printLongestWord(test_array))
 
-// Objects
+// // Objects
 let user = {
-    name: "JimBob Horkhiemer",
+    name: "jimbob horkhiemer",
     email: "JamesRobertsHorkhiemrIV@proton.me",
     age:  15,
     purchased: []
-}
-user.email = 'JimmyBob_H@gmail.com'
-console.log(user.email);
-user.age = user.age += 1 ;
+    }
+
+
+  
+// user.email = 'JimmyBob_H@gmail.com'
+// console.log(user.email);
+// user.age += 1 ;
 // console.log(user.age)
 user.location = 'the dark side of the moon';
 // console.log(user.location);
@@ -285,20 +288,156 @@ user.purchased.push('merino jodhpurs')
 // console.log(user.purchased[2])
 
 user.friend = {
-    name: 'Grace Hopper',
+    name: 'grace hopper',
     age: 85,
     location: 'illuminated side of the moon',
     purchased: []
 }
-console.log(user.friend.name + ', ' + user.friend.location)
-user.friend.age = 55;
-console.log(user.friend.age);
-user.friend.purchased.push('The One Ring', 'a latte')
-console.log(user.friend.purchased[1])
-for(i = 0; i < user.purchased.length; i++){
-    console.log(user.purchased[i])
-}
+// console.log(user.friend.name + ', ' + user.friend.location)
+// user.friend.age = 55;
+// console.log(user.friend.age);
+// user.friend.purchased.push('The One Ring', 'a latte')
+// console.log(user.friend.purchased[1])
+// for(i = 0; i < user.purchased.length; i++){
+//     console.log(user.purchased[i])
+// }
 
 for(i = 0; i < user.friend.purchased.length; i++){
     console.log(user.friend.purchased[i])
 }
+// function oldAndLoud(person){
+//     person.name.charAt(0).to;
+//     person.age++
+// }
+// oldAndLoud(user)
+// console.log(user)
+// console.log(user.name.toUpperCase())
+function updateUser(){
+    user.name = user.name.toUpperCase();
+    user.age++;
+}
+updateUser()
+
+// console.log(user)
+
+function oldAndLoud(person){
+    person.name = person.name.toUpperCase();
+    person.age++;
+}
+
+// let grace = user.friend
+// console.log(grace)
+// oldAndLoud(grace)
+// console.log(grace)
+
+// CAT Combinator 
+cat1 = {
+    name: 'cat',
+    breed: 'weird',
+    age: 74
+
+}
+
+console.log(cat1.age)
+console.log(cat1.breed)
+
+cat2 = {
+    name: 'fuzzy',
+    breed:  'happy',
+    age: 104
+}
+
+
+function combineCats(mama, papa){
+    cat3 = {
+        name: mama.name + papa.name,
+        age: 1,
+        breed: mama.breed + '-' + papa.breed
+    }
+    return cat3
+}
+newCat = combineCats(cat1, cat2)
+console.log(newCat)
+
+newCat2 = combineCats(combineCats(combineCats(cat1, cat2), combineCats(cat2,cat1)),combineCats(combineCats(cat1, cat2), combineCats(cat2, cat1)))
+console.log(newCat2)
+// class Person{
+//     constructor(nameParam, ageParam = 0, heightParam = 0, weightParam = 0, moodParam = 0, hamsterArray = [], bankAccountParam = 0){
+//         this.name = nameParam;
+//         this.age = ageParam;
+//         this.height = heightParam;
+//         this.weight = weightParam;
+//         this.mood = moodParam;
+//         this.hamsters = hamsterArray;
+//         this.bankAccount = bankAccountParam;
+
+//     }
+//     getName(){
+//         return this.name
+//     }
+//     getAge(){
+//         return this.age
+//     }
+//     getWeight(){
+//         this.weight
+//     }
+//     greet(){
+//         console.log('hello my name is ' + this.name)
+//     }
+//     eat(){
+//         this.weight++;
+//         this.mood++;
+//     }
+//     exercise(){
+//         this.weight--;
+//     }
+//     ageUp(years){
+//         for(i = 0; i < years; i++){
+//         this.age++;
+//         this.height++;
+//         this.weight++;
+//         this.mood--;
+//         this.bankAccount+=10
+//         }
+//     }
+//     buyHamster(hamster){
+//         this.hamsters.push(hamster);
+//         this.mood += 10;
+//         this.bankAccount -= hamster.price;
+//     }
+// }
+
+// let eonPerson = new Person('Eon', 44, 76, 205, 1)
+// // console.log(eonPerson.height)
+
+// let timmy = new Person("Timmy", 9, 34, 94, 2,[1,2,3,4,5],0)
+
+// console.log(timmy)
+// console.log(timmy.age)
+// timmy.ageUp(5)
+// console.log(timmy.age, timmy.height)
+
+
+// console.log(timmy)
+
+
+
+// class Dinner{
+//     constructor(appetizerParam, entreeParam, dessertParam){
+//         this.appetizer = appetizerParam;
+//         this.entree = entreeParam;
+//         this.dessert = dessertParam;
+//     }
+
+// }
+// class Chef{
+//     cookDinner(appetizer, entree, dessert){
+//         return new Dinner(appetizer, entree, dessert)
+//     }
+// }
+// let chefJones = new Chef;
+// let yummy = chefJones.cookDinner('salad', 'hamburger', 'ice cream')
+// console.log(yummy)
+
+
+
