@@ -338,8 +338,8 @@ cat1 = {
 
 }
 
-console.log(cat1.age)
-console.log(cat1.breed)
+// console.log(cat1.age)
+// console.log(cat1.breed)
 
 cat2 = {
     name: 'fuzzy',
@@ -357,10 +357,27 @@ function combineCats(mama, papa){
     return cat3
 }
 newCat = combineCats(cat1, cat2)
-console.log(newCat)
+// console.log(newCat)
 
 newCat2 = combineCats(combineCats(combineCats(cat1, cat2), combineCats(cat2,cat1)),combineCats(combineCats(cat1, cat2), combineCats(cat2, cat1)))
-console.log(newCat2)
+// console.log(newCat2)
+
+
+// END REVIEW 1
+
+// const possibleIterable = [4, 3, 9, 6, 23];
+// const divByThree = {};
+// // ADD CODE HERE
+
+// console.log()
+// for(let i = 0; i <= possibleIterable.length; i++){
+//   if(possibleIterable[i] % 3 == 0){
+//     divByThree[possibleIterable[i]] = i;
+//   }else {continue}
+// }
+// console.log(divByThree)
+// console.log(typeof(5))
+
 // class Person{
 //     constructor(nameParam, ageParam = 0, heightParam = 0, weightParam = 0, moodParam = 0, hamsterArray = [], bankAccountParam = 0){
 //         this.name = nameParam;
@@ -420,7 +437,7 @@ console.log(newCat2)
 
 // console.log(timmy)
 
-
+// factory function
 
 // class Dinner{
 //     constructor(appetizerParam, entreeParam, dessertParam){
@@ -440,4 +457,87 @@ console.log(newCat2)
 // console.log(yummy)
 
 
+// array methods -  map, filter, foreach, find, find
+const nums = [1, 2, 3, 4, 5, 6, 7, 9, 10, 0]
+const panagram = ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']
 
+function callback(element){
+    if(element > 0){
+        return true
+    }else {return false}
+}
+let test = nums.every(callback)
+
+console.log('the result is ', test)
+
+function callback_3(element){
+    if(element.length <= 8){
+        return true
+    }else{return false}
+}
+
+let test_3 = panagram.every(callback_3)
+console.log('second result is: ', test_3)
+
+let test_4 = panagram.every(function(element) {
+    if(element.length <= 8){
+        return true
+    }else{return false}
+})
+
+test_4_minimal = panagram.every(element => element.length < 8)
+console.log('5th result is: ', test_4_minimal)
+// function callback_2 (element){
+//    return element += 5
+// }
+
+// let test_2 = nums.map(callback_2)
+
+// console.log(test_2)
+
+// filter number less than 4 and words with even length
+
+let filter_test = nums.filter(element => element < 4)
+console.log(filter_test)
+
+let panagram_filter = panagram.filter(word => word.length % 2 == 0)
+console.log(panagram_filter)
+
+// find 
+let find_test = nums.find(element => element %5 == 0)
+console.log('find test: ',find_test)
+
+let panagramFind = panagram.find(word => word.length > 3)
+
+console.log(panagramFind)
+
+//  find index
+let num_index_find = nums.findIndex(element => element%3 == 0)
+console.log('first index mod 3: ', num_index_find)
+
+let panagramFindIndex = panagram.findIndex(word => word.length < 4)
+console.log('index of number less than 2 length; ', panagramFindIndex)
+
+// for each
+// nums.forEach(num => console.log(num*3))
+// console.log('for each times 3: ',forEach3)
+
+// panagram.forEach(word => console.log(word.concat('!')))
+// console.log('for each panagram: ', panagramForEach)
+
+
+// some 
+let someNum = nums.some(element => element%7 ==0)
+console.log('num mod 7: ', someNum)
+
+let somePanagram = panagram.some(word => /a/.test(word))
+console.log('is a in the panagram: ', somePanagram)
+
+// map
+let numTimes100 = nums.map(num => num*100)
+console.log(numTimes100)
+
+let panagramToUpper = panagram.map(word => word.toUpperCase().concat('!'))
+console.log(panagramToUpper)
+
+// reduce and sort

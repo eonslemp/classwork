@@ -180,3 +180,70 @@ let test = 'steven the donkey is a silly name for a donkey';
 // }
 
 // console.log(minChange(27.83, 113))
+
+function numberToAccountingString(number){
+    if(number != null){
+        if (number < 0){
+            return `(${Math.abs(number)})`
+            } else {
+            return number.toString()
+    } 
+}
+}
+
+// function numberToStringPro(number){
+//     if(number == null) return  // guard clause
+//     if(number < 0) return `(${Math.abs(number)})`
+//     return number.toString()
+// }
+// console.log(numberToStringPro(0))
+// console.log(numberToStringPro(10))
+// console.log(numberToStringPro(-5))
+// console.log(numberToStringPro(null))
+
+// noob version
+function calculateTotal(items, options){
+    let t = 0
+    items.forEach(i =>{
+        t+= i.price * i.quan
+    })
+    t = t - t*(options.dis || 0)
+    t = t * 1.1
+    t = t + (options.ship || 5)
+    return t
+}
+
+// Pro version
+const TAX_RATE = 1.1
+const SHIPPING_DEFAULT = 5
+
+function calculateTotalPro(items, options = {}){  // deffault options value
+    if (items == null || items.length === 0) return 0  // gaurd clause
+
+    let total = 0
+    items.forEach(item => {
+        total += item.price * item.quantity
+    })
+    total = total - total * (options.discount || 0)
+    total = total * TAX_RATE
+    if (options.shipping !== 0){
+        total = total + (options.shipping || SHIPPING_DEFAULT)
+    }
+    return total
+}
+
+function calculateTotalProPlus(items, {shipping = SHIPPING_DEFFUALT, discount = 0} = {}){
+    if (items == null || items.length === 0) return 0
+
+    const itemCost = items.reduce((total, item) => {
+        return total + item.price * item.quantity
+    }, 0)
+    const discountRate = 1 - discount
+    return itemCost * discountRate * TAX_RATE + shipping
+}
+
+
+// destructuring
+
+const alphabet = ['A', 'B', 'C', 'D','E','F','G']
+const numbers = ['1', '2', '3', '4', '5', '6']

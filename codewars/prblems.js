@@ -23,7 +23,6 @@ function findShort(s){
         stringArr.splice(i,1,stringArr[i].length)
         }
     return stringArr.sort()[0]
-
 }
 string = 'zeke the donkey is a silly name for a donkey'
 string_2 = 'antidisestablishmentarianism'

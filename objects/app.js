@@ -62,19 +62,19 @@
 // }
 
 
-// let book = {
-//     title: "Clean Code",
-//     author: 'Robert Martin',
-//     pages: 410,
-//     isGood: true,
-//     chapters: ['1','2','3','4','5','6','7'],
-//     read:  function(){
-//         console.log('clean code is good and you should do it a lot!')
-//     },
-//     pagesPerChapter (){
-//         console.log(book.pages/book.chapters.length)
-//     }
-// }
+let book = {
+    title: "Clean Code",
+    author: 'Robert Martin',
+    pages: 410,
+    isGood: true,
+    chapters: ['1','2','3','4','5','6','7'],
+    read:  function(){
+        console.log('clean code is good and you should do it a lot!')
+    },
+    pagesPerChapter (){
+        console.log(book.pages/book.chapters.length)
+    }
+}
 // console.log(book.chapters)
 // // let pages = book.pages;
 // // let chap = book.chapters.length
@@ -180,3 +180,4 @@ let test = 'steven the donkey is a silly name for a donkey';
 // }
 
 // console.log(minChange(27.83, 113))
+
