@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    font-family:  Helvetica;
+
+}
+
+/* flexbox one dimension for children
+grid = two dimensions for children
+ */
+
+nav {
+    display: flex;
+    height: 50px;
+    border: 2px solid red;
+    font-size: 20px;
+    margin:  10px, 0px, 0px, 0px;
+    color: #f3dba8;
+    font-size: 20px;
+    margin:  10px;
+    color: #f3dba8;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #a2cbb6;
+ }
+
+ div {
+    outline: 2px solid brown;
+    padding: 13px;
+ }
+
+ nav > div:last-child {
+    margin-left: auto;
+ }
+ 
+ #para-id {
+    color: black;
+
+ }
+ .para {
+    color: purple;
+ }
+ /* specificity */
+/* (0, 0, 2) */
+/*   (id, class, tags) */
+body h1 {
+    color: green;
+ }
+
+h1 {
+    color: brown !important;
+    border: 10px solid blue;
+    height:  150px;
+
+ }

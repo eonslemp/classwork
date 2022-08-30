@@ -14,14 +14,20 @@ body {
     margin: 0;
     display: grid;
     grid-template-rows: 3rem auto;
-    color: rgb(59, 30, 30);
+    color:  white;
  }
 
  .flex-ctr {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
  }
+ .flex-around{
+    display: flex;
+    justify-content: space-around;
+    align-items:  center;
+ }
+
 
  nav a {
     line-height: 3rem;
@@ -33,5 +39,25 @@ body {
  }
 
  #top-menu a:hover {
-    background-color: var(--sub-menu-bg)
+    background-color: var(--sub-menu-bg);
  }
+
+ header, #top-menu {
+   position: relative;
+ }
+ #top-menu {
+   z-index: 20;
+ }
+#sub-menu {
+   width: 100%;
+   z-index:10;
+   transition:  top 0.5s ease-out;
+
+}
+#sub-menu a:hover {
+   background-color:  var(--top-menu-bg);
+}
+nav a.actve {
+   background-color:  var(--sub-menu-bg);
+   color:  var(--main-bg)
+}
