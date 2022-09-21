@@ -28,11 +28,12 @@ app.get('/tip/:total/:tipPercentage', (req, res) => {
 // }
 
 app.get('/magic/:phrase', (req, res) => {
-    
-    res.send(req.params.phrase + ' ' + fortune[Math.floor(Math.random() * fortune.length)])
+    let x = req.params.phrase + ' ' + fortune[Math.floor(Math.random() * fortune.length)]
+    res.send('<h1>' + x + '</h1>')
+
 })
 
-console.log(fortune[Math.floor(Math.random()*fortune.length)])
+// console.log(fortune[Math.floor(Math.random()*fortune.length)])
 
 
 app.listen(port, () => {
