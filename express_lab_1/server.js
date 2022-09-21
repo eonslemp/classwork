@@ -18,6 +18,15 @@ app.get('/greeting/:name', (req, res) => {
     res.send('hello ' + req.params.name)
 })
 
+app.get('/tip/:total/:tipPercentage', (req, res) => {
+    // console.log(res.params.total)
+    res.send('tip calculated is: ' +  req.params.total * (req.params.tipPercentage / 100))
+})
+
+// app.get('/tip/:total/:tipPercentage', (req, res) => {
+//     res.send("Tip calculated is: " + req.params.total * (req.params.tipPercentage / 100));
+// })
+
 app.listen(port, () => {
     console.log('listening on port: ', 3000)
 })
